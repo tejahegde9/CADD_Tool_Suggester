@@ -1,0 +1,60 @@
+[
+  {
+    "task_id": "CADD000",
+    "task_query": "Download protein sequence in FASTA format",
+    "best_tool_name": "UniProt (Universal Protein Resource)",
+    "best_tool_reason": "Offers the most comprehensive functional annotation (Swiss-Prot) and reliable canonical sequence, crucial for target selection.",
+    "tools_list": [
+      {
+        "name": "UniProt (Universal Protein Resource)",
+        "url": "https://www.uniprot.org/",
+        "focus": "Functional Annotation & Canonical Sequence",
+        "category": "Database/Resource"
+      },
+      {
+        "name": "NCBI Protein Database",
+        "url": "https://www.ncbi.nlm.nih.gov/protein/",
+        "focus": "Integration with NCBI Tools & GenBank accessions",
+        "category": "Database/Resource"
+      },
+      {
+        "name": "RCSB PDB (Protein Data Bank)",
+        "url": "https://www.rcsb.org/",
+        "focus": "Sequences corresponding to known 3D structures (PDB IDs)",
+        "category": "Database/Resource"
+      }
+    ]
+  },
+  {
+    "task_id": "CADD001",
+    "task_query": "Obtain or predict the 3D structure of the target protein",
+    "best_tool_name": "RCSB PDB and AlphaFold DB",
+    "best_tool_reason": "Always prioritize experimentally solved structures (PDB) or high-confidence predicted structures (AlphaFold DB) over modeling before proceeding with docking.",
+    "tools_list": [
+      {
+        "name": "RCSB PDB (Protein Data Bank)",
+        "url": "https://www.rcsb.org/",
+        "focus": "Retrieval of experimentally solved structures (X-ray, Cryo-EM).",
+        "category": "Database/Resource"
+      },
+      {
+        "name": "AlphaFold DB",
+        "url": "https://alphafold.ebi.ac.uk/",
+        "focus": "Retrieval of highly accurate, computationally predicted protein structures (when no PDB structure is available).",
+        "category": "Database/Resource"
+      },
+      {
+        "name": "SWISS-MODEL",
+        "url": "https://swissmodel.expasy.org/",
+        "focus": "Automated Homology Modeling: used when a good structural template (similar protein) is available.",
+        "category": "Web Server/Modeling"
+      },
+      {
+        "name": "I-TASSER",
+        "url": "https://zhanggroup.org/I-TASSER/",
+        "focus": "State-of-the-art *de novo* and threading-based structure prediction (used when few/no good templates are available).",
+        "category": "Web Server/Modeling"
+      }
+    ]
+  }
+]
